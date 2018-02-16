@@ -17,21 +17,28 @@ pipeline {
                 sh 'sudo rm -r *;sudo git clone https://github.com/devops98/terraJenkins.git'
             }
         }
-        stage('tfsvars create'){
+       /* stage('tfsvars create'){
             steps {
                 sh 'sudo cp /home/ec2-user/vars.tf ./jenkins/'
             }
-        }
+        } */
         stage('terraform init') {
             steps {
-                sh 'sudo /home/ec2-user/terraform init ./jenkins'
+                sh 'sudo terraform init'
             }
         }
         stage('terraform plan') {
             steps {
-                sh 'ls ./jenkins; sudo /home/ec2-user/terraform plan ./jenkins'
+                sh 'terraform plan'
             }
         }
+		
+		stage('terraform apply') {
+            steps {
+                sh 'terraform apply'
+            }
+        }
+		
         stage('terraform ended') {
             steps {
                 sh 'echo "Ended....!!"'
