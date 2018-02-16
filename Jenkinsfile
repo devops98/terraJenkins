@@ -1,4 +1,4 @@
-pipeline {
+
     /* agent {
         node {
             label 'awspack2'
@@ -53,4 +53,4 @@ pipeline {
 
 	} 
     
-}
+
