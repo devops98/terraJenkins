@@ -1,13 +1,13 @@
 pipeline {
-    agent {
+    /* agent {
         node {
             label 'awspack2'
         }
-    }
+    } */
 
-    stages {
+	node ("awspack2") {  
 
-        stage('terraform started') {
+	stage('terraform started') {
             steps {
                 sh 'echo "Started...!" '
             }
@@ -51,6 +51,6 @@ pipeline {
             }
         }
 
-        
-    }
+	} 
+    
 }
