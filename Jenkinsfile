@@ -24,7 +24,7 @@ pipeline {
         } */
         stage('terraform init') {
             steps {
-                sh 'sudo terraform init'
+                sh 'ls;sudo terraform init'
             }
         }
         stage('terraform plan') {
