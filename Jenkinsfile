@@ -25,7 +25,7 @@ pipeline {
 	    
 	stage('terraform mkdir') {
             steps {
-                sh 'sudo mkdir testdir'
+                sh 'sudo mkdir testdir;sudo ls'
             }
         }
         stage('terraform init') {
