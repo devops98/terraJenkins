@@ -5,7 +5,7 @@
         }
     } */
 
-	node ("awspack2") {  
+	node ('awspack2') {  
 
 	stage('terraform started') {
             steps {
