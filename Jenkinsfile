@@ -1,11 +1,12 @@
 
-    /* agent {
+    pipeline {
+    agent {
         node {
             label 'awspack2'
         }
-    } */
+    }
 
-	node ('awspack2') {  
+    stages {
 
 	stage('terraform started') {
             steps {
@@ -53,4 +54,4 @@
 
 	} 
     
-
+    }
