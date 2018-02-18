@@ -31,18 +31,18 @@
         }
         stage('terraform init') {
             steps {
-                sh 'ls;cd terraJenkins; terraform init'
+                sh 'ls;cd terraJenkins; terraform init -upgrade'
             }
         }
         stage('terraform plan') {
             steps {
-                sh 'cd terraJenkins; terraform plan'
+                sh 'cd terraJenkins; terraform plan out=tfplan'
             }
         }
 		
 		stage('terraform apply') {
             steps {
-                sh 'cd terraJenkins; terraform apply -lock=false -input=false '
+                sh 'cd terraJenkins; terraform apply "tfplan"'
             }
         }
 		
