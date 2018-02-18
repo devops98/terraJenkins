@@ -42,7 +42,7 @@
 		
 		stage('terraform apply') {
             steps {
-                sh 'cd terraJenkins; terraform apply --input=false'
+                sh 'cd terraJenkins; terraform apply -auto-approve'
             }
         }
 		
