@@ -45,6 +45,12 @@
                 sh 'cd terraJenkins; terraform apply -auto-approve'
             }
         }
+	    
+     stage('terraform destroy') {
+            steps {
+                sh 'cd terraJenkins; terraform destroy -force'
+            }
+        }
 		
         stage('terraform ended') {
             steps {
