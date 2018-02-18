@@ -42,7 +42,7 @@
 		
 		stage('terraform apply') {
             steps {
-                sh 'cd terraJenkins; terraform apply'
+                sh 'cd terraJenkins; terraform apply -lock=false -input=false '
             }
         }
 		
