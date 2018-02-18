@@ -13,7 +13,7 @@
                 sh 'echo "Started...!" '
             }
         }
-        stage('git clone') {
+       /* stage('git clone') {
             steps {
                 sh 'sudo rm -r *;git clone https://github.com/devops98/terraJenkins.git'
             }
@@ -44,7 +44,7 @@
             steps {
                 sh 'cd terraJenkins; terraform apply -auto-approve'
             }
-        }
+        } */
 	    
      stage('terraform destroy') {
             steps {
