@@ -36,13 +36,13 @@
         }
         stage('terraform plan') {
             steps {
-                sh 'terraform plan'
+                sh 'cd terraJenkins; terraform plan'
             }
         }
 		
 		stage('terraform apply') {
             steps {
-                sh 'terraform apply'
+                sh 'cd terraJenkins; terraform apply'
             }
         }
 		
