@@ -36,13 +36,13 @@
         }
         stage('terraform plan') {
             steps {
-                sh 'cd terraJenkins; terraform plan out=tfplan'
+                sh 'cd terraJenkins; terraform plan'
             }
         }
 		
 		stage('terraform apply') {
             steps {
-                sh 'cd terraJenkins; terraform apply "tfplan"'
+                sh 'cd terraJenkins; terraform apply --input=false'
             }
         }
 		
