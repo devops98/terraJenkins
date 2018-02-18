@@ -26,12 +26,12 @@
 	    
 	stage('terraform mkdir') {
             steps {
-                sh 'sudo mkdir testdir;sudo ls'
+                sh 'mkdir testdir; ls'
             }
         }
         stage('terraform init') {
             steps {
-                sh 'ls;sudo terraform init'
+                sh 'ls; terraform init'
             }
         }
         stage('terraform plan') {
