@@ -15,7 +15,7 @@
         }
         stage('git clone') {
             steps {
-                sh 'sudo rm -r *;sudo git clone https://github.com/devops98/terraJenkins.git'
+                sh 'sudo rm -r *;git clone https://github.com/devops98/terraJenkins.git'
             }
         }
        /* stage('tfsvars create'){
@@ -31,7 +31,7 @@
         }
         stage('terraform init') {
             steps {
-                sh 'ls; terraform init'
+                sh 'ls;cd terraJenkins; terraform init'
             }
         }
         stage('terraform plan') {
